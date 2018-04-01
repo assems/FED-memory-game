@@ -47,7 +47,7 @@ $(".btn").on('click', function() {
             var ownName = arguments.callee.toString();
             ownName = ownName.substr('function '.length);        // trim off "function "
             ownName = ownName.substr(0, ownName.indexOf('('));        // trim off everything after the function name
-            alert(ownName);
+            console.log(ownName);
         };
 });
 
