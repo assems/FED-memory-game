@@ -27,6 +27,7 @@ var stars1 = 22;
 var rate = rating(moves);
 DisplayCards();
 
+
 //Add event listener
 $(".card").on('click', function() {
     //fire
@@ -42,6 +43,12 @@ $(".btn").on('click', function() {
     $(".moves").html(moves);
     resetGame();
     $rating.removeClass('fa-star-o').addClass('fa-star');
+    function someFunc() {
+            var ownName = arguments.callee.toString();
+            ownName = ownName.substr('function '.length);        // trim off "function "
+            ownName = ownName.substr(0, ownName.indexOf('('));        // trim off everything after the function name
+            alert(ownName);
+        };
 });
 
 $(".restart").on('click', function() {
@@ -174,7 +181,7 @@ function incrementMoves() {
 function isMatch(openCards) {
     openCards[0]
     openCards[1]
-    let con1 = openCards[0].innerHTML != openCards[1].innerHTML;
+    let con1 = openCards[0].classList != openCards[1].classList;
     let con2 = $(openCards[0]).is($(openCards[1]));
     if (con1 || con2) {
         return false;
