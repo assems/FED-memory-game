@@ -64,6 +64,7 @@ function CardsInitalize() {
     domCards = document.getElementsByClassName("card");
     return transformer(domCards);
 }
+console.log(openCards);
 // ----------- end CardsInitalize  ----------
 
 //--------------- start transformer -----------
